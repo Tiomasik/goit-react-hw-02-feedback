@@ -6,9 +6,11 @@ export const List = styled.div `
 
     button {
         cursor: pointer;
+        font-size: 18px;
         padding: 5px;
-        border: 1px solid tomato;
+        border: 2px solid tomato;
         border-radius: 5px;
+        background-color: transparent;
 
         :hover {
             background-color: tomato;

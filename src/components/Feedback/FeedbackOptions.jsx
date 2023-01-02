@@ -6,7 +6,6 @@ const FeedbackOptions = ({ countGoodFeedback, countNeutralFeedback, countBadFeed
                 <button type='button' onClick={countNeutralFeedback}>Neutral</button>
                 <button type='button' onClick={countBadFeedback}>Bad</button>
             </List>  
-    
 }
 
 export default FeedbackOptions

@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
 import Notification from './Notification'
+import { StyleStatistics, StyleGood, StyleNeutral, StyleBad } from './Statistics.styled'
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
-    return <div>
+    return <StyleStatistics>
                 <h2>Statistics</h2>
                 {total === 0 ? (<Notification message="There is no feedback"></Notification>) : 
-                    (<div>
-                        <p>Good: { good }</p>
-                        <p>Neutral: {neutral}</p>
-                        <p>Bad: {bad}</p>
-                        <p>Total: {total}</p>
-                        <p>Positive feedback: { positivePercentage }%</p>
-                    </div>)} 
-            </div>  
+                (<div>
+                    <StyleGood>Good: { good }</StyleGood>
+                    <StyleNeutral>Neutral: {neutral}</StyleNeutral>
+                    <StyleBad>Bad: {bad}</StyleBad>
+                    <p>Total: {total}</p>
+                    <p>Positive feedback: { positivePercentage }%</p>
+                </div>)} 
+            </StyleStatistics>  
     
 }
 
