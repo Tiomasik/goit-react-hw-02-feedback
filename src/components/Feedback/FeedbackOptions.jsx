@@ -1,9 +1,11 @@
+import { List } from './FeedbackOptions.styled';
+
 const FeedbackOptions = ({ countGoodFeedback, countNeutralFeedback, countBadFeedback }) => {
-    return <div>
-            <button type='button' onClick={countGoodFeedback}>Good</button>
-            <button type='button' onClick={countNeutralFeedback}>Neutral</button>
-            <button type='button' onClick={countBadFeedback}>Bad</button>
-    </div>  
+    return <List>
+                <button type='button' onClick={countGoodFeedback}>Good</button>
+                <button type='button' onClick={countNeutralFeedback}>Neutral</button>
+                <button type='button' onClick={countBadFeedback}>Bad</button>
+            </List>  
     
 }
 
