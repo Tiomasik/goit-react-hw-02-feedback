@@ -11,21 +11,11 @@ class App extends Component {
     bad: 0
   };
     
-  countGoodFeedback = () => {
-    this.setState(prevState => ({
-      good: prevState.good + 1,
-    }));
-  };
+  countFeedback = (evt) => {
+    const option = evt.target.firstChild.nodeValue.toLowerCase()
     
-  countNeutralFeedback = () => {
     this.setState(prevState => ({
-      neutral: prevState.neutral + 1,
-    }));
-  };
-    
-  countBadFeedback = () => {
-    this.setState(prevState => ({
-      bad: prevState.bad + 1,
+      [option]: prevState[option] + 1,
     }));
   };
 
@@ -51,9 +41,8 @@ class App extends Component {
 
       return (
         <Section title="Please leave feedback">
-          <FeedbackOptions  countGoodFeedback={this.countGoodFeedback}
-                            countNeutralFeedback={this.countNeutralFeedback}
-                            countBadFeedback={this.countBadFeedback}>
+          <FeedbackOptions  options={ ['Good', 'Neutral', 'Bad'] }
+                            onLeaveFeedback={this.countFeedback}>
           </FeedbackOptions>
           <Statistics good={good}
                       neutral={neutral}
