@@ -11,8 +11,8 @@ class App extends Component {
     bad: 0
   };
     
-  countFeedback = (evt) => {
-    const option = evt.target.firstChild.nodeValue.toLowerCase()
+  countFeedback = ( data ) => {
+    const option = data.toLowerCase()
     
     this.setState(prevState => ({
       [option]: prevState[option] + 1,
