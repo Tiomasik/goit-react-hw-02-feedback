@@ -11,6 +11,7 @@ export const List = styled.div `
         border: 2px solid tomato;
         border-radius: 5px;
         background-color: transparent;
+        text-transform: capitalize;
 
         :hover {
             background-color: tomato;

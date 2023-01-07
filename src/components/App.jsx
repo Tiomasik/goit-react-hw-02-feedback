@@ -12,10 +12,8 @@ class App extends Component {
   };
     
   countFeedback = ( data ) => {
-    const option = data.toLowerCase()
-    
     this.setState(prevState => ({
-      [option]: prevState[option] + 1,
+      [data]: prevState[data] + 1,
     }));
   };
 
@@ -41,7 +39,7 @@ class App extends Component {
 
       return (
         <Section title="Please leave feedback">
-          <FeedbackOptions  options={ ['Good', 'Neutral', 'Bad'] }
+          <FeedbackOptions  options={ Object.keys(this.state) }
                             onLeaveFeedback={this.countFeedback}>
           </FeedbackOptions>
           <Statistics good={good}
